@@ -1,3 +1,11 @@
+import { Summary } from './components/Summary'
+
+import * as S from './styles'
+
 export function Home() {
-  return <h1>Home</h1>
+  return (
+    <S.Wrapper>
+      <Summary />
+    </S.Wrapper>
+  )
 }

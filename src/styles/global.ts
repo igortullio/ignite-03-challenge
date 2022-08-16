@@ -22,11 +22,14 @@ export const GlobalStyle = createGlobalStyle`
     body,
     input,
     textarea,
-    button {
+    button,
+    h1,
+    h2,
+    h3 {
       font-family: ${theme.font.family};
       font-weight: ${theme.font.weights.regular};
       font-size: ${theme.font.sizes[3]};
-      line-height: ${theme.font.height};
+      line-height: ${theme.font.heights.extended};
     }
   `}
   

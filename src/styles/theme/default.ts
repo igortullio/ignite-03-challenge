@@ -26,6 +26,9 @@ export const defaultTheme = {
       regular: 400,
       bold: 700,
     },
-    height: '160%',
+    heights: {
+      default: '130%',
+      extended: '160%',
+    },
   },
 } as const
