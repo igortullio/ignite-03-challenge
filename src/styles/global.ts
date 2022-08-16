@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     h1,
     h2,
     h3 {
+      color: ${theme.colors.text};
       font-family: ${theme.font.family};
       font-weight: ${theme.font.weights.regular};
       font-size: ${theme.font.sizes[3]};
