@@ -27,7 +27,7 @@ export function Home() {
   async function fetchIssues(search?: string) {
     const response = await api.get('/search/issues', {
       params: {
-        q: `repo:igortullio/ignite-03-challenge%20${search}`,
+        q: `${search || ''}repo:igortullio/ignite-03-challenge`,
       },
     })
     setIssues(response.data.items)
@@ -51,7 +51,7 @@ export function Home() {
           Publicações
           <S.FormHeaderInfo>{issues.length} publicações</S.FormHeaderInfo>
         </S.FormHeader>
-        <Form />
+        <Form onSubmit={({ query }) => fetchIssues(query)} />
       </S.FormContainer>
 
       <S.Cards>

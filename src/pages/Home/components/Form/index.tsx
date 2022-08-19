@@ -10,7 +10,11 @@ const searchFormSchema = zod.object({
 
 type SearchFormData = zod.infer<typeof searchFormSchema>
 
-export function Form() {
+interface FormProps {
+  onSubmit: (data: SearchFormData) => void
+}
+
+export function Form({ onSubmit }: FormProps) {
   const { register, handleSubmit } = useForm<SearchFormData>({
     resolver: zodResolver(searchFormSchema),
     defaultValues: {
@@ -18,7 +22,9 @@ export function Form() {
     },
   })
 
-  function handleSearch(data: SearchFormData) {}
+  function handleSearch(data: SearchFormData) {
+    onSubmit(data)
+  }
 
   return (
     <S.Wrapper onSubmit={handleSubmit(handleSearch)}>
