@@ -1,24 +1,19 @@
 import * as S from './styles'
 
-export function Card() {
+export interface CardProps {
+  title: string
+  body: string
+  updatedAt: string
+}
+
+export function Card({ title, body, updatedAt }: CardProps) {
   return (
     <S.Wrapper>
       <S.Header>
-        JavaScript data types and data structures
-        <S.HeaderInfo>Há 1 dia</S.HeaderInfo>
+        {title}
+        <S.HeaderInfo>{updatedAt}</S.HeaderInfo>
       </S.Header>
-      <S.Content>
-        Programming languages all have built-in data structures, but these often
-        differ from one language to a. This article attempts to list the
-        built-in data structures available in JavaScript and what properties
-        they have. These can be used to build other data structures. Wherever
-        possible, comparisons with other languages are drawn. Dynamic typing
-        JavaScript is a loosely typed and dynamic language. Variables in
-        JavaScript are not directly associated with any particular value type,
-        and any variable can be assigned (and re-assigned) values of all types:
-        let foo = 42; // foo is now a number foo = bar // foo is now a string
-        foo = true; // foo is now a boolean
-      </S.Content>
+      <S.Content>{body}</S.Content>
     </S.Wrapper>
   )
 }

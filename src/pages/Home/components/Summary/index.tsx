@@ -7,7 +7,7 @@ import {
 
 import * as S from './styles'
 
-export interface UserProps {
+export interface User {
   login: string
   name: string
   bio: string
@@ -16,7 +16,7 @@ export interface UserProps {
   avatar_url: string
 }
 export interface SummaryProps {
-  user: UserProps
+  user: User
 }
 
 export function Summary({ user }: SummaryProps) {
