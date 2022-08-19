@@ -2,6 +2,7 @@ import { Summary } from './components/Summary'
 import { Form } from './components/Form'
 
 import * as S from './styles'
+import { Card } from './components/Card'
 
 export function Home() {
   return (
@@ -15,6 +16,14 @@ export function Home() {
         </S.FormHeader>
         <Form />
       </S.FormContainer>
+
+      <S.Cards>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </S.Cards>
     </S.Wrapper>
   )
 }

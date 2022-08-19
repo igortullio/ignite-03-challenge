@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 `
 
 export const FormContainer = styled.div`
-  margin: 4.5rem 0 3rem;
+  margin: 3rem 0;
 
   display: flex;
   flex-direction: column;
@@ -36,4 +36,13 @@ export const FormHeaderInfo = styled.span`
     font-size: ${theme.font.sizes[2]};
     color: ${theme.colors.span};
   `}
+`
+
+export const Cards = styled.ul`
+  margin-bottom: 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 26rem);
+  row-gap: 2rem;
+  justify-content: space-between;
 `

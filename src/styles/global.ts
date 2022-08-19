@@ -25,12 +25,17 @@ export const GlobalStyle = createGlobalStyle`
     button,
     h1,
     h2,
-    h3 {
+    h3,
+    p {
       color: ${theme.colors.text};
       font-family: ${theme.font.family};
       font-weight: ${theme.font.weights.regular};
       font-size: ${theme.font.sizes[3]};
       line-height: ${theme.font.heights.extended};
+    }
+
+    li {
+      list-style: none;
     }
   `}
   
