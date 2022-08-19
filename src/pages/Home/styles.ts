@@ -46,3 +46,11 @@ export const Cards = styled.ul`
   row-gap: 2rem;
   justify-content: space-between;
 `
+
+export const Loading = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `}
+`

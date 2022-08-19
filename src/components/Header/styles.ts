@@ -12,5 +12,9 @@ export const Wrapper = styled.header`
     img:nth-child(2) {
       margin-top: -6rem;
     }
+
+    img:not(:nth-child(2)) {
+      width: 409px;
+    }
   `}
 `
