@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 import { dateFormatter } from '../../../../utils/formatter'
 
@@ -20,7 +22,9 @@ export function Card({ number, title, body, createdAt }: CardProps) {
         {title}
         <S.HeaderInfo>{dateFormatter.format(new Date(createdAt))}</S.HeaderInfo>
       </S.Header>
-      <S.Content>{body}</S.Content>
+      <S.Content>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
+      </S.Content>
     </S.Wrapper>
   )
 }
