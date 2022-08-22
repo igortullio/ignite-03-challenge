@@ -8,7 +8,7 @@ import { api } from '../../libs/axios'
 import * as S from './styles'
 
 interface Issue {
-  id: number
+  number: number
   title: string
   body: string
   updated_at: string
@@ -56,7 +56,7 @@ export function Home() {
 
       <S.Cards>
         {issues.map((issue) => (
-          <Card key={issue.id} {...issue} updatedAt={issue.updated_at} />
+          <Card key={issue.number} {...issue} updatedAt={issue.updated_at} />
         ))}
       </S.Cards>
     </S.Wrapper>

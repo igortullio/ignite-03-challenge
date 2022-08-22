@@ -28,7 +28,7 @@ export function Summary({ user }: SummaryProps) {
         <S.Info>
           <S.Header>
             <S.Title>{user.name}</S.Title>
-            <S.Link href={user.html_url} target="_blank">
+            <S.Link to={user.html_url} target="_blank">
               <S.LinkText>GITHUB</S.LinkText>
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </S.Link>

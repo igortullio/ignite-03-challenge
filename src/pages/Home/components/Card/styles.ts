@@ -13,6 +13,7 @@ export const Wrapper = styled.li`
     position: relative;
     border: 2px solid ${theme.colors.post};
     cursor: pointer;
+    text-decoration: none;
 
     width: 26rem;
     height: 16.25rem;

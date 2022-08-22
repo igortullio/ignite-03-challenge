@@ -16,7 +16,8 @@ export interface User {
 
 export interface Post {
   title: string
-  published_at: string
+  created_at: string
+  updated_at: string
   comments: number
 }
 
@@ -29,11 +30,11 @@ export function Summary({ user, post }: SummaryProps) {
   return (
     <S.Wrapper>
       <S.Header>
-        <S.Link href={user.html_url} target="_blank">
+        <S.Link to="/">
           <FontAwesomeIcon icon={faChevronLeft} />
           <S.LinkText>VOLTAR</S.LinkText>
         </S.Link>
-        <S.Link href={user.html_url} target="_blank">
+        <S.Link to={user.html_url} target="_blank">
           <S.LinkText>GITHUB</S.LinkText>
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
         </S.Link>
@@ -47,7 +48,11 @@ export function Summary({ user, post }: SummaryProps) {
           </S.Tag>
           <S.Tag>
             <FontAwesomeIcon icon={faCalendarDay} />
-            {post.published_at}
+            {post.created_at}
+          </S.Tag>
+          <S.Tag>
+            <FontAwesomeIcon icon={faCalendarDay} />
+            {post.updated_at}
           </S.Tag>
           <S.Tag>
             <FontAwesomeIcon icon={faComment} />
