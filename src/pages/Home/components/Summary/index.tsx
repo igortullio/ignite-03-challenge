@@ -15,6 +15,7 @@ export interface User {
   followers: number
   avatar_url: string
 }
+
 export interface SummaryProps {
   user: User
 }
