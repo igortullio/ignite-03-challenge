@@ -1,6 +1,6 @@
 # Rocketseat Ignite - Challenge 03
 
-## Open site
+## [Open site](https://github-blog-igortullio.vercel.app/)
 
 ## [Instructions](https://efficient-sloth-d85.notion.site/Desafio-03-Github-Blog-13593953670346908462ddc648d42cf1)
 
