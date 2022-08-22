@@ -11,6 +11,7 @@ interface Issue {
   number: number
   title: string
   body: string
+  created_at: string
   updated_at: string
   url: string
 }
@@ -56,7 +57,7 @@ export function Home() {
 
       <S.Cards>
         {issues.map((issue) => (
-          <Card key={issue.number} {...issue} updatedAt={issue.updated_at} />
+          <Card key={issue.number} {...issue} createdAt={issue.created_at} />
         ))}
       </S.Cards>
     </S.Wrapper>

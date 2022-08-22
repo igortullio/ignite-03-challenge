@@ -1,22 +1,24 @@
 import { useNavigate } from 'react-router-dom'
 
+import { dateFormatter } from '../../../../utils/formatter'
+
 import * as S from './styles'
 
 export interface CardProps {
   number: number
   title: string
   body: string
-  updatedAt: string
+  createdAt: string
 }
 
-export function Card({ number, title, body, updatedAt }: CardProps) {
+export function Card({ number, title, body, createdAt }: CardProps) {
   const navigate = useNavigate()
 
   return (
     <S.Wrapper onClick={() => navigate(`/post/${number}`)}>
       <S.Header>
         {title}
-        <S.HeaderInfo>{updatedAt}</S.HeaderInfo>
+        <S.HeaderInfo>{dateFormatter.format(new Date(createdAt))}</S.HeaderInfo>
       </S.Header>
       <S.Content>{body}</S.Content>
     </S.Wrapper>

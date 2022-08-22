@@ -7,6 +7,8 @@ import {
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { dateFormatter } from '../../../../utils/formatter'
+
 import * as S from './styles'
 
 export interface User {
@@ -48,11 +50,7 @@ export function Summary({ user, post }: SummaryProps) {
           </S.Tag>
           <S.Tag>
             <FontAwesomeIcon icon={faCalendarDay} />
-            {post.created_at}
-          </S.Tag>
-          <S.Tag>
-            <FontAwesomeIcon icon={faCalendarDay} />
-            {post.updated_at}
+            {dateFormatter.format(new Date(post.created_at))}
           </S.Tag>
           <S.Tag>
             <FontAwesomeIcon icon={faComment} />
