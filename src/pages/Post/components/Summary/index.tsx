@@ -21,6 +21,7 @@ export interface Post {
   created_at: string
   updated_at: string
   comments: number
+  html_url: string
 }
 
 export interface SummaryProps {
@@ -36,10 +37,10 @@ export function Summary({ user, post }: SummaryProps) {
           <FontAwesomeIcon icon={faChevronLeft} />
           <S.LinkText>VOLTAR</S.LinkText>
         </S.Link>
-        <S.Link to={user.html_url} target="_blank">
+        <S.LinkExternal href={post.html_url} target="_blank">
           <S.LinkText>GITHUB</S.LinkText>
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-        </S.Link>
+        </S.LinkExternal>
       </S.Header>
       <S.Content>
         <S.Title>{post.title}</S.Title>

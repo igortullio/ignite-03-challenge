@@ -34,6 +34,18 @@ export const Link = styled(LinkRouterDom)`
   `}
 `
 
+export const LinkExternal = styled.a`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: ${theme.colors.blue};
+
+    text-transform: uppercase;
+    text-decoration: none;
+  `}
+`
+
 export const LinkText = styled.span`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes[1]};

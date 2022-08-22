@@ -1,5 +1,3 @@
-import { Link as LinkRouterDom } from 'react-router-dom'
-
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.section`
@@ -39,7 +37,7 @@ export const Header = styled.header`
   justify-content: space-between;
 `
 
-export const Link = styled(LinkRouterDom)`
+export const Link = styled.a`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
